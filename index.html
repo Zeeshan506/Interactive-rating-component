@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#141519] flex flex-col items-center justify-center h-screen"
+    style="font-family: 'Overpass', sans-serif"
+  >
+    <main
+      id="ratingComponent"
+      class="flex flex-col items-center justify-center bg-gradient-to-b from-[#1f272f] to-[#181f25] w-[90%] md:w-[45%] lg:w-[30%] text-white rounded-2xl p-8 gap-4"
+      aria-label="Rating Component"
+    >
+      <div class="flex mr-auto">
+        <img
+          src="/images/icon-star.svg"
+          alt="icon-star"
+          class="bg-[#262f38] p-4 rounded-full mb-6"
+          aria-label="Star Icon"
+        />
+      </div>
+      <div class="mr-auto">
+        <h1 class="text-3xl font-bold text-left">How did we do?</h1>
+      </div>
+      <div class="mr-auto">
+        <p class="font-light text-[#9197a1]">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+      </div>
+      <div class="flex items-center justify-around w-full my-4">
+        <button
+          class="bg-[#272e38] w-13 text-[#9197a1] hover:bg-[#ff7511] hover:text-[#141519] font-semibold h-13 rounded-full text-center transition-all duration-500 ease-in-out"
+          id="points"
+        >
+          1
+        </button>
+        <button
+          class="bg-[#272e38] w-13 text-[#9197a1] hover:bg-[#ff7511] hover:text-[#141519] font-semibold h-13 rounded-full text-center transition-all duration-500 ease-in-out"
+          id="points"
+        >
+          2
+        </button>
+        <button
+          class="bg-[#272e38] w-13 text-[#9197a1] hover:bg-[#ff7511] hover:text-[#141519] font-semibold h-13 rounded-full text-center transition-all duration-500 ease-in-out"
+          id="points"
+        >
+          3
+        </button>
+        <button
+          class="bg-[#272e38] w-13 text-[#9197a1] hover:bg-[#ff7511] hover:text-[#141519] font-semibold h-13 rounded-full text-center transition-all duration-500 ease-in-out"
+          id="points"
+        >
+          4
+        </button>
+        <button
+          class="bg-[#272e38] w-13 text-[#9197a1] hover:bg-[#ff7511] hover:text-[#141519] font-semibold h-13 rounded-full text-center transition-all duration-500 ease-in-out"
+          id="points"
+        >
+          5
+        </button>
+      </div>
+      <p class="hidden mr-auto text-red-500" id="errorMessage">
+        Please Select a Rating
+      </p>
+      <button
+        class="bg-[#ff7511] text-[#141519] font-semibold px-4 py-2 rounded-full w-full text-center tracking-widest hover:bg-white transition-all duration-500 ease-in-out relative"
+        aria-label="submit button"
+        id="submitBtn"
+        type="submit"
+      >
+        SUBMIT
+      </button>
+    </main>
+
+    <main
+      id="thankyouComponent"
+      class="flex flex-col hidden items-center justify-center bg-gradient-to-b from-[#1f272f] to-[#181f25] w-[90%] md:w-[35%] lg:w-[25%] text-white rounded-2xl p-8 gap-4"
+      aria-label="Thank You Component"
+    >
+      <div class="flex justify-center">
+        <img
+          src="/images/illustration-thank-you.svg"
+          alt="Thank You Illustration"
+          class="w-3/4"
+          aria-label="Thank You Illustration"
+        />
+      </div>
+      <div
+        class="bg-[#272e38] mb-8 text-[#ff7511] text-sm font-semibold px-4 py-2 rounded-full w-fit text-center"
+      >
+        You Selected <span id="rating">X</span> out of 5
+      </div>
+      <div>
+        <h1 class="text-3xl text-center">Thank you!</h1>
+      </div>
+      <div>
+        <p class="font-light text-center text-sm text-[#9197a1]">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+    </main>
+
+    <script src="/index.js"></script>
+  </body>
+</html>
